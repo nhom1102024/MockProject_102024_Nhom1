@@ -1,0 +1,48 @@
+server:
+  http2:
+    enabled: true
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://${SQL_SERVER_DB_SERVER_ADDRESS:localhost}:${SQL_SERVER_DB_SERVER_PORT:1433};databaseName=${SQL_SERVER_DB_NAME:testdb};encrypt=true;trustServerCertificate=true
+    username: ${SQL_SERVER_USER:cngthnh}
+    password: ${SQL_SERVER_PASSWORD:22112002}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      pool-name: LeaseMasterBackend
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+  jta:
+    enabled: false
+
+springdoc:
+  show-actuator: true
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework: INFO
+    com.seichi.auth_service: INFO
+
+## FIXME : Customize JWT token and Swagger information for your application
+
+jwt:
+  secretKey: secret
+  issuer: www.seichi.com
+  expirationMinute: 10
+
+swagger:
+  app-name: Authentication Service
+  app-version: 0.0.1
