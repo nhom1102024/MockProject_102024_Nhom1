@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  background-color: #ccc;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-wrapper {
+  margin: auto;
+  width: 450px;
+  height: 420px;
+  background-color: #fff;
+}
+
+.login {
+  margin: 36px 48px;
+}
+
+.login-header {
+  margin-bottom: 24px;
+}
+
+.login-header__greeting {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.login-header__title {
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 16px 0px 16px 24px;
+  outline: none;
+  border-radius: 2px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.login-footer-btn {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-footer-btn Button {
+  height: 50px;
+  width: 150px;
+  max-width: 150px;
+  background: linear-gradient(
+    to right,
+    rgba(215, 0, 255, 0.8),
+    rgba(148, 0, 250, 0.8)
+  );
+  color: #fff;
+}
+
+.login-footer__forgetpw {
+  color: #000;
+  font-weight: 400;
+}
+
+.login-footer-homeback Button {
+  height: 50px;
+  width: 150px;
+  max-width: 150px;
+  background: linear-gradient(
+    to right,
+    rgba(215, 0, 255, 0.8),
+    rgba(148, 0, 250, 0.8)
+  );
+  color: #fff;
+}
