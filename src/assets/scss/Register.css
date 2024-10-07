@@ -1,0 +1,43 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+h2,
+p {
+  color: #4b4b4b;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-button {
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #9c6cf3;
+  color: white;
+  cursor: pointer;
+}
+
+.back-to-login {
+  color: #9c6cf3;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.register-button:hover,
+.back-to-login:hover {
+  opacity: 0.8;
+}
