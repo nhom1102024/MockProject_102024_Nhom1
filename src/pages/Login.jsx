@@ -12,11 +12,7 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username === users.username && password === users.password) {
-      alert("Đăng nhập thành công");
-    } else {
-      alert("Đăng nhập thất bại");
-    }
+    console.log("hello");
   };
   return (
     <div className="wrapper">
