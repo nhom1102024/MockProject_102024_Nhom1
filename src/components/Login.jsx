@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Router } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Login.css";
 
@@ -6,13 +8,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const hardCodedEmail = "hoangvanthong@gmail.com";
+  const navigate = useNavigate();
+
+  const hardCodedEmail = "admin@gmail.com";
   const hardCodedPassword = "123456";
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === hardCodedEmail && password === hardCodedPassword) {
-      alert("Log in successfully!");
+      navigate("/debt");
     } else {
       setError("Email or password is incorrect");
     }
@@ -48,7 +52,7 @@ const Login = () => {
               className="input"
             />
           </div>
-          <button type="submit" className="button">
+          <button type="submit" className="button" onClick={handleLogin}>
             Login
           </button>
           {error && <p className="error">{error}</p>}
