@@ -1,6 +1,8 @@
 package com.lease_master.security.service;
 
+import com.lease_master.consts.UserRole;
 import com.lease_master.model.User;
+import com.lease_master.repository.RoleRepository;
 import com.lease_master.repository.UserRepository;
 import com.lease_master.security.dto.AuthenticatedUserDto;
 import com.lease_master.security.dto.RegistrationRequest;
@@ -22,6 +24,7 @@ public class UserServiceImpl implements UserService {
 	private static final String REGISTRATION_SUCCESSFUL = "registration_successful";
 
 	private final UserRepository userRepository;
+	private final RoleRepository roleRepository;
 
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -43,9 +46,13 @@ public class UserServiceImpl implements UserService {
 		final User user = UserMapper.INSTANCE.convertToUser(registrationRequest);
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
-		// FIXME : Implement set role for user
-		//user.setUserRole(UserRole.USER);
+		// Fetch the role with name "User" and set it for the user
+		var userRole = roleRepository.findByRoleName(UserRole.USER);
+		if (userRole == null) {
+			throw new IllegalArgumentException("Role 'User' not found");
+		}
 
+		user.setRole(userRole);
 		userRepository.save(user);
 
 		final String username = registrationRequest.getUsername();
