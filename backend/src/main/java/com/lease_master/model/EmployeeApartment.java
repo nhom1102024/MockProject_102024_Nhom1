@@ -36,5 +36,5 @@ public class EmployeeApartment {
 
     private String status;
 
-    private LocalDateTime deleteAt;
+    private LocalDateTime deletedAt;
 }

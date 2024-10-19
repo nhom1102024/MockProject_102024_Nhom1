@@ -36,5 +36,5 @@ public class Candidate {
 
     private String address;
 
-    private LocalDateTime deleteAt;
+    private LocalDateTime deletedAt;
 }

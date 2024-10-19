@@ -39,5 +39,5 @@ public class Unit {
 
     private String description;
 
-    private LocalDateTime deleteAt;
+    private LocalDateTime deletedAt;
 }

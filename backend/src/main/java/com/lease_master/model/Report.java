@@ -34,5 +34,5 @@ public class Report {
 
     private String status;
 
-    private LocalDateTime deleteAt;
+    private LocalDateTime deletedAt;
 }
