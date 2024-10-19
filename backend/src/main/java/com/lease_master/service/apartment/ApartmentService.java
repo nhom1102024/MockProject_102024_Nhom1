@@ -29,9 +29,9 @@ public class ApartmentService {
     public Apartment save(Apartment apartment) {
         log.info("Saving apartment: {}", apartment);
 
-        // Ensure deleteAt is set to null when creating a new apartment
+        // Ensure deletedAt is set to null when creating a new apartment
         if (apartment.getApartmentId() == null) {
-            apartment.setDeleteAt(null);
+            apartment.setDeletedAt(null);
         }
 
         return apartmentRepository.save(apartment);
@@ -59,7 +59,7 @@ public class ApartmentService {
     }
 
     /**
-     * Soft deletes an apartment by setting the deleteAt field to the current time.
+     * Soft deletes an apartment by setting the deletedAt field to the current time.
      *
      * @param id the ID of the apartment to softly delete
      */
@@ -71,7 +71,7 @@ public class ApartmentService {
                     log.error("apartment with id {} not found", id);
                     return new RuntimeException("apartment not found");
                 });
-        apartment.setDeleteAt(LocalDateTime.now());
+        apartment.setDeletedAt(LocalDateTime.now());
         apartmentRepository.save(apartment);
         log.info("apartment with id {} soft deleted successfully", id);
     }
