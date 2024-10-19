@@ -65,9 +65,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public AuthenticatedUserDto findAuthenticatedUserByUsername(String username) {
-
 		final User user = findByUsername(username);
-
 		return UserMapper.INSTANCE.convertToAuthenticatedUserDto(user);
 	}
 }

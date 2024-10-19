@@ -34,7 +34,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		final String authenticatedUsername = authenticatedUser.getUsername();
 		final String authenticatedPassword = authenticatedUser.getPassword();
-		final String userRole = authenticatedUser.getUserRole();
+		final String userRole = authenticatedUser.getRoleName();
 		final SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority(userRole);
 
 		return new User(authenticatedUsername, authenticatedPassword, Collections.singletonList(grantedAuthority));

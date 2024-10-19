@@ -10,12 +10,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AuthenticatedUserDto {
 
-	private String name;
+	private String fullName;
 
 	private String username;
 
 	private String password;
 
-	private String userRole;
+	private String roleName;
 
 }

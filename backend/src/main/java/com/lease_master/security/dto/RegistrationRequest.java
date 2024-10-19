@@ -7,13 +7,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Date;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 public class RegistrationRequest {
-
 	@NotEmpty(message = "{registration_name_not_empty}")
 	private String name;
 
@@ -27,4 +27,11 @@ public class RegistrationRequest {
 	@NotEmpty(message = "{registration_password_not_empty}")
 	private String password;
 
+	private String avatar;
+	private String fullName;
+	private Date dateOfBirth;
+	private Character gender;
+	private String address;
+	private String phoneNumber;
+	private String status;
 }
