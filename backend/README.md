@@ -13,14 +13,23 @@
 
 ## Run the Application
 
-First you need to make sure that the database is up. 
-If you're using Docker, you can use ```docker compose up -d``` command. (If you have made changes in local, you should use the *local-docker-compose* file.)
+1. **Setting up the environtment:**
 
-Navigate to the root of the project. For building the project using command line, run below command :
+- You need to make sure that the database is up.
+- If you're using Docker, you can use ```docker compose up -d``` command. (If you have made changes in local, you should use the *local-docker-compose* file.)
 
+2. **Create an `.env` file:**
+
+- Copy the contents of `.env.example` file and paste it into a new file named `.env`.
+- Fill in the required values in the `.env`
+
+3. **Run the project:**
+
+- Navigate to the root of the project. For building the project using command line, run below command :
+ 
 ``` mvn clean install```
 
-Run service in command line. Navigate to *target* directory. 
+- Run service in command line. Navigate to *target* directory. 
 
 ``` java -jar lease-master.jar ```
 
