@@ -2,11 +2,11 @@
 *Lease Master* is an application designed for managing apartment complexes. This project is simple yet incredibly useful.
  
 ## Technologies 
-- Spring Boot (v3.3.1)
+- Spring Boot (v3.3.4)
 - Spring Data JPA
 - Spring Validation
 - Spring Security + JWT Token
-- PostgreSQL
+- SQL Server
 - Mapstruct
 - Lombok
 - Swagger (Open API)
