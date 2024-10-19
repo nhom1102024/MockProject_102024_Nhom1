@@ -1,4 +1,4 @@
-package com.lease_master.service;
+package com.lease_master.service.apartment;
 
 import com.lease_master.model.Apartment;
 import com.lease_master.repository.ApartmentRepository;
@@ -68,12 +68,12 @@ public class ApartmentService {
         log.info("Soft deleting apartment with id: {}", id);
         Apartment apartment = apartmentRepository.findById(id)
                 .orElseThrow(() -> {
-                    log.error("Apartment with id {} not found", id);
-                    return new RuntimeException("Apartment not found");
+                    log.error("apartment with id {} not found", id);
+                    return new RuntimeException("apartment not found");
                 });
         apartment.setDeleteAt(LocalDateTime.now());
         apartmentRepository.save(apartment);
-        log.info("Apartment with id {} soft deleted successfully", id);
+        log.info("apartment with id {} soft deleted successfully", id);
     }
 
     /**

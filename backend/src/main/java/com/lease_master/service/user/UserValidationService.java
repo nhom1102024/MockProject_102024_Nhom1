@@ -1,4 +1,4 @@
-package com.lease_master.service;
+package com.lease_master.service.user;
 
 import com.lease_master.exceptions.RegistrationException;
 import com.lease_master.security.dto.RegistrationRequest;

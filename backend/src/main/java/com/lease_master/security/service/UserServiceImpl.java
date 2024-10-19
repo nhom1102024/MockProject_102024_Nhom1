@@ -5,7 +5,7 @@ import com.lease_master.repository.UserRepository;
 import com.lease_master.security.dto.AuthenticatedUserDto;
 import com.lease_master.security.dto.RegistrationRequest;
 import com.lease_master.security.dto.RegistrationResponse;
-import com.lease_master.service.UserValidationService;
+import com.lease_master.service.user.UserValidationService;
 import com.lease_master.utils.GeneralMessageAccessor;
 import com.lease_master.security.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
