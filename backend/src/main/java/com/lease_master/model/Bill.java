@@ -25,7 +25,7 @@ public class Bill {
 
     @ManyToOne
     @JoinColumn(name = "service_id", nullable = false)
-    private Service service;
+    private Services service;
 
     private BigDecimal amount;
 

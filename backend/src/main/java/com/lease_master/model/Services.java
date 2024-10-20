@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Service")
-public class Service {
+public class Services {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,11 @@ public class Service {
     @JoinColumn(name = "provider_id", nullable = false)
     private Provider provider;
 
-    private String nameService;
+    private String serviceName;
 
     private String description;
 
-    private String categoryService;
+    private String serviceType;
 
     private BigDecimal price;
 

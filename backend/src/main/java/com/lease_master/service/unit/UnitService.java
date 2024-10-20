@@ -90,7 +90,7 @@ public class UnitService {
     }
 
     /**
-     * Checks if an unit exists by ID.
+     * Checks if a unit exists by ID.
      *
      * @param id the ID of the unit
      * @return true if the unit exists, false otherwise
