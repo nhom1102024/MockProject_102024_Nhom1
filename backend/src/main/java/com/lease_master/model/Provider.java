@@ -3,6 +3,8 @@ package com.lease_master.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Entity
@@ -16,7 +18,7 @@ public class Provider {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long providerId;
 
-    private String nameProvider;
+    private String providerName;
 
     private String contactPerson;
 
@@ -27,4 +29,6 @@ public class Provider {
     private String address;
 
     private String status;
+
+    private LocalDateTime deletedAt;
 }
