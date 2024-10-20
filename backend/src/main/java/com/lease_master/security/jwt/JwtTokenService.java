@@ -1,6 +1,6 @@
 package com.lease_master.security.jwt;
 
-import com.lease_master.security.mapper.UserMapper;
+import com.lease_master.mapper.UserMapper;
 import com.lease_master.security.service.UserService;
 import com.lease_master.model.User;
 import com.lease_master.security.dto.AuthenticatedUserDto;

@@ -9,7 +9,7 @@ import com.lease_master.security.dto.RegistrationRequest;
 import com.lease_master.security.dto.RegistrationResponse;
 import com.lease_master.service.user.UserValidationService;
 import com.lease_master.utils.GeneralMessageAccessor;
-import com.lease_master.security.mapper.UserMapper;
+import com.lease_master.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

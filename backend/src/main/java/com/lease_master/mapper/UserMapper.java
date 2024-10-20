@@ -1,4 +1,4 @@
-package com.lease_master.security.mapper;
+package com.lease_master.mapper;
 
 import com.lease_master.model.User;
 import com.lease_master.security.dto.AuthenticatedUserDto;
