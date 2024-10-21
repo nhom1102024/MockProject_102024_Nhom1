@@ -41,7 +41,7 @@ public class Services {
 
     private String implementationSchedule;
 
-    private LocalDateTime deletedAt;
-
     private String status;
+
+    private LocalDateTime deletedAt;
 }

@@ -29,10 +29,6 @@ public class Unit {
 
     private Integer area;
 
-    private Integer bedRooms;
-
-    private Integer bathRooms;
-
     private String status;
 
     private BigDecimal price;
